@@ -1,0 +1,315 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5;
+    overflow-x: hidden;
+}
+
+/* Header and Navigation */
+header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+nav {
+    width: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), no-repeat center center/cover;
+    padding: 1rem 2rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 3
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    flex: 1;
+}
+
+nav .logo a {
+    display: block;
+}
+
+nav .logo-img {
+    max-height: 50px;
+    width: auto;
+}
+
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav .nav-links li a:hover {
+    color: #C817E4;
+    border-bottom: 2px solid #C817E4;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+        transition: transform 0.3s ease;
+        transform: translateX(100%);
+    }
+
+    nav .nav-links.active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .menu-toggle .hamburger {
+        font-size: 2rem;
+    }
+
+    nav .nav-links li a {
+        font-size: 1.2rem;
+    }
+}
+
+/* Hero Section */
+.hero {
+   
+  
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.etsy.com%2Fin-en%2Flisting%2F860120090%2Fsimple-iphone-wallpaper-design-modern&psig=AOvVaw0GoGDrnEyZspxKPn3NVz0R&ust=1726083135080000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMjLzfSOuYgDFQAAAAAdAAAAABAE') no-repeat center center/cover;
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative; */
+}
+
+.hero-overlay {
+   
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+  
+    min-height: fit-content;
+    max-height:max-content;
+    /* background: rgba(0, 0, 0, 0.5);  */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    z-index: 1;
+    max-width: 800px;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin: 1rem 0;
+}
+
+.btn-primary {
+    background: #C817E4;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #cf47e4;
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    background: #4a4a4a;
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #333;
+    transform: translateY(-3px);
+}
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Features Section */
+/* Features Section */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust column count based on available space */
+    gap: 2rem; /* Space between grid items */
+    text-align: center;
+    margin: 0 auto; /* Center the grid container */
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card i {
+    color: #C817E4; /* Icon color */
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    font-size: 1rem;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feature-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+}
+
+
+/* Screenshots */
+.screenshot-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.screenshot-gallery img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+/* Testimonials */
+.testimonial-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.testimonial {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 300px;
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+}
+
+.testimonial cite {
+    display: block;
+    margin-top: 1rem;
+    font-style: italic;
+    color: #777;
+}
+#download .container ,#contact .container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+/* Footer */
+footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
